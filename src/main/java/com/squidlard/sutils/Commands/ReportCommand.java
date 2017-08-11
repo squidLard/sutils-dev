@@ -73,8 +73,8 @@ public class ReportCommand implements CommandExecutor{
             setCooldown(player, TimeUtils.parse("30s"));
             for (Player staff : Bukkit.getServer().getOnlinePlayers()) {
                 if (staff.hasPermission("util.recieve")) {
-                    staff.sendMessage(Color.translate("&9[Report]&b " + sender.getName() + " &7has reported &b" + target.getName()));
-                    staff.sendMessage(Color.translate("     &9Reason&8:&7" + StringUtils.join(args, ' ').replace(args[0], "")));
+                    staff.sendMessage(Color.translate("&4[Report]&e " + sender.getName() + " &7has reported &e" + target.getName()));
+                    staff.sendMessage(Color.translate("     &4Reason&8:&7" + StringUtils.join(args, ' ').replace(args[0], "")));
                 }
             }
         }

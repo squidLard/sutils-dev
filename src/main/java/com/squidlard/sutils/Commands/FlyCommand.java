@@ -31,7 +31,7 @@ public class FlyCommand implements CommandExecutor, Listener{
         for (Player staff : Bukkit.getOnlinePlayers()) {
             if (isAdmin(staff)) {
                 if (p == staff) {
-                    p.sendMessage(Color.translate(Core.getInstance().getConfig().getString("FlyEnableMsg").replace("%target%", p.getName())));
+                    p.sendMessage(Color.translate(Core.getInstance().getConfig().getString("FlyEnableMsg").replace("%player%", p.getName())));
                 }
                 else
                 {
@@ -48,7 +48,7 @@ public class FlyCommand implements CommandExecutor, Listener{
         for (Player staff : Bukkit.getOnlinePlayers()) {
             if (isAdmin(staff)) {
                 if (p == staff) {
-                    p.sendMessage(Color.translate(Core.getInstance().getConfig().getString("FlyDisableMsg").replace("%target%", p.getName())));
+                    p.sendMessage(Color.translate(Core.getInstance().getConfig().getString("FlyDisableMsg").replace("%player%", p.getName())));
                 }
                 else
                 {
@@ -78,7 +78,7 @@ public class FlyCommand implements CommandExecutor, Listener{
                     for (Player staff : Bukkit.getOnlinePlayers()) {
                         if (isAdmin(staff)) {
                             if (player == staff) {
-                                player.sendMessage(Color.translate(Core.getInstance().getConfig().getString("FlyDisableMsg").replace("%target%", player.getName())));
+                                player.sendMessage(Color.translate(Core.getInstance().getConfig().getString("FlyDisableMsg").replace("%player%", player.getName())));
                             }
                             else
                             {
@@ -93,7 +93,7 @@ public class FlyCommand implements CommandExecutor, Listener{
                 for (Player staff : Bukkit.getOnlinePlayers()) {
                     if (isAdmin(staff)) {
                         if (player == staff) {
-                            player.sendMessage(Color.translate(Core.getInstance().getConfig().getString("FlyEnableMsg").replace("%target%", player.getName())));
+                            player.sendMessage(Color.translate(Core.getInstance().getConfig().getString("FlyEnableMsg").replace("%player%", player.getName())));
                         }
                         else
                         {
@@ -113,7 +113,7 @@ public class FlyCommand implements CommandExecutor, Listener{
                     for (Player staff : Bukkit.getOnlinePlayers()) {
                         if (isAdmin(staff)) {
                             if (player == staff) {
-                                player.sendMessage(Color.translate(Core.getInstance().getConfig().getString("FlyDisableMsg").replace("%target%", target.getName())));
+                                player.sendMessage(Color.translate(Core.getInstance().getConfig().getString("FlyDisableMsg").replace("%player%", target.getName())));
                             }
                             else
                             {
@@ -128,7 +128,7 @@ public class FlyCommand implements CommandExecutor, Listener{
                 for (Player staff : Bukkit.getOnlinePlayers()) {
                     if (isAdmin(staff)) {
                         if (player == staff) {
-                            player.sendMessage(Color.translate(Core.getInstance().getConfig().getString("FlyEnableMsg").replace("%target%", target.getName())));
+                            player.sendMessage(Color.translate(Core.getInstance().getConfig().getString("FlyEnableMsg").replace("%player%", target.getName())));
                         }
                         else
                         {

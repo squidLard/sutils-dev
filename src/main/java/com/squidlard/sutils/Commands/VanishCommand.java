@@ -51,24 +51,24 @@ public class VanishCommand implements CommandExecutor {
             if (this.core.getVanishListener().isVanished(player)) {
                 if (this.core.getModModeListener().isStaffModeActive(player)) {
                     this.core.getVanishListener().setVanished(player, false);
-                    player.sendMessage(Color.translate(core.getConfig().getString("VanishDisableMsg")));
+                    player.sendMessage(Color.translate(core.getConfig().getString("VanishDisableMsg").replace("%player%", player.getName())));
                     player.getInventory().setItem(this.core.getConfig().getInt("VanishDisableObject.InventorySlot") - 1, disabled);
                     return true;
                 }
                 this.core.getVanishListener().setVanished(player, false);
-                player.sendMessage(Color.translate(core.getConfig().getString("VanishDisableMsg")));
+                player.sendMessage(Color.translate(core.getConfig().getString("VanishDisableMsg").replace("%player%", player.getName())));
                 return true;
             }
             else
             {
                 if (this.core.getModModeListener().isStaffModeActive(player)) {
                     this.core.getVanishListener().setVanished(player, true);
-                    player.sendMessage(Color.translate(core.getConfig().getString("VanishEnableMsg")));
+                    player.sendMessage(Color.translate(core.getConfig().getString("VanishEnableMsg").replace("%player%", player.getName())));
                     player.getInventory().setItem(this.core.getConfig().getInt("VanishEnableObject.InventorySlot") - 1, enabled);
                     return true;
                 }
                 this.core.getVanishListener().setVanished(player, true);
-                player.sendMessage(Color.translate(core.getConfig().getString("VanishEnableMsg")));
+                player.sendMessage(Color.translate(core.getConfig().getString("VanishEnableMsg").replace("%player%", player.getName())));
                 return true;
             }
         }
@@ -84,30 +84,26 @@ public class VanishCommand implements CommandExecutor {
         if (args.length == 1) {
             if (isAdmin(player)) {
                 if (this.core.getVanishListener().isVanished(target)) {
-                    if (this.core.getModModeListener().isStaffModeActive(target)) {
+                        if (this.core.getModModeListener().isStaffModeActive(target)) {
                         this.core.getVanishListener().setVanished(target, false);
-                        target.sendMessage(Color.translate(core.getConfig().getString("VanishDisableMsg")));
                         target.getInventory().setItem(8, disabled);
-                        player.sendMessage(Color.translate(core.getConfig().getString("VanishDisableOtherMsg").replace("%target%", target.getName())));
+                        player.sendMessage(Color.translate(core.getConfig().getString("VanishDisableMsg").replace("%player%", target.getName())));
                         return true;
                     }
                     this.core.getVanishListener().setVanished(target, false);
-                    target.sendMessage(Color.translate(core.getConfig().getString("VanishDisableMsg")));
-                    player.sendMessage(Color.translate(core.getConfig().getString("VanishDisableOtherMsg").replace("%target%", target.getName())));
+                    player.sendMessage(Color.translate(core.getConfig().getString("VanishDisableMsg").replace("%player%", target.getName())));
                     return true;
                 }
                 else
                 {
                     if (this.core.getModModeListener().isStaffModeActive(target)) {
                         this.core.getVanishListener().setVanished(target, true);
-                        target.sendMessage(Color.translate(core.getConfig().getString("VanishEnableMsg")));
-                        player.sendMessage(Color.translate(core.getConfig().getString("VanishEnableOtherMsg").replace("%target%", target.getName())));
+                        player.sendMessage(Color.translate(core.getConfig().getString("VanishEnableMsg").replace("%player%", target.getName())));
                         target.getInventory().setItem(8, enabled);
                         return true;
                     }
                     this.core.getVanishListener().setVanished(target, true);
-                    target.sendMessage(Color.translate(core.getConfig().getString("VanishEnableMsg")));
-                    player.sendMessage(Color.translate(core.getConfig().getString("VanishEnableOtherMsg").replace("%target%", target.getName())));
+                    player.sendMessage(Color.translate(core.getConfig().getString("VanishEnableMsg").replace("%player%", target.getName())));
                     return true;
                 }
             }

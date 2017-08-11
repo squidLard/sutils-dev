@@ -27,13 +27,13 @@ public class ChatListener implements Listener{
         if (status) {
             if (this.core.isMod(player)) {
                 this.staffchat.add(player.getUniqueId());
-                player.sendMessage(Color.translate("&bStaff Chat &7Enabled."));
+                player.sendMessage(Color.translate("&eStaff chat mode for %player% set to true.").replace("%player%", player.getName()));
             }
         }
         else
         {
             this.staffchat.remove(player.getUniqueId());
-            player.sendMessage(Color.translate("&bStaff Chat &7Disabled."));
+            player.sendMessage(Color.translate("&eStaff chat mode for %player% set to false.").replace("%player%", player.getName()));
         }
     }
 

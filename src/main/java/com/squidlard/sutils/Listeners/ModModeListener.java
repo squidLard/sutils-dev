@@ -45,7 +45,7 @@ public class ModModeListener implements Listener{
                 saveInventory(player);
                 player.setGameMode(GameMode.CREATIVE);
                 this.core.getVanishListener().setVanished(player, true);
-                player.sendMessage(Color.translate(core.getConfig().getString("ModEnableMsg")));
+                player.sendMessage(Color.translate(core.getConfig().getString("ModEnableMsg").replace("%player%", player.getName())));
                 player.getInventory().clear();
                 ModItems.giveItems(player);
             }
@@ -61,7 +61,7 @@ public class ModModeListener implements Listener{
             loadInventory(player);
             player.setGameMode(GameMode.SURVIVAL);
             this.core.getVanishListener().setVanished(player, false);
-            player.sendMessage(Color.translate(core.getConfig().getString("ModDisableMsg")));
+            player.sendMessage(Color.translate(core.getConfig().getString("ModDisableMsg").replace("%player%", player.getName())));
         }
     }
 
@@ -118,13 +118,13 @@ public class ModModeListener implements Listener{
             if (event.getAction().toString().contains("RIGHT")) {
                 if ((itemstack.getType() == Material.INK_SACK) && (itemstack.getItemMeta().getDisplayName().equalsIgnoreCase(Color.translate(Core.getInstance().getConfig().getString("VanishEnableObject.Name"))))) {
                     this.core.getVanishListener().setVanished(p, false);
-                    p.sendMessage(com.squidlard.sutils.Utilities.Color.translate(Core.getInstance().getConfig().getString("VanishDisableMsg")));
+                    p.sendMessage(com.squidlard.sutils.Utilities.Color.translate(Core.getInstance().getConfig().getString("VanishDisableMsg").replace("%player%", p.getName())));
                     p.getInventory().setItem(this.core.getConfig().getInt("VanishDisableObject.InventorySlot") - 1, disabled);
                     return;
                 }
                 if ((itemstack.getType() == Material.INK_SACK) && (itemstack.getItemMeta().getDisplayName().equalsIgnoreCase(Color.translate(Core.getInstance().getConfig().getString("VanishDisableObject.Name"))))) {
                     this.core.getVanishListener().setVanished(p, true);
-                    p.sendMessage(com.squidlard.sutils.Utilities.Color.translate(Core.getInstance().getConfig().getString("VanishEnableMsg")));
+                    p.sendMessage(com.squidlard.sutils.Utilities.Color.translate(Core.getInstance().getConfig().getString("VanishEnableMsg").replace("%player%", p.getName())));
                     p.getInventory().setItem(this.core.getConfig().getInt("VanishEnableObject.InventorySlot") - 1, enabled);
                     return;
                 }
@@ -381,6 +381,7 @@ public class ModModeListener implements Listener{
         Player player = event.getPlayer();
         event.setJoinMessage(null);
         if (player.hasPermission("util.command.basic")) {
+            this.setStaffMode(player, true);
             staff.add(player.getUniqueId());
             for (Player staff : Bukkit.getServer().getOnlinePlayers()) {
                 if ((staff.hasPermission("util.command.basic") && (this.core.getConfig().getBoolean("JoinLeaveMessages")))) {
@@ -398,7 +399,7 @@ public class ModModeListener implements Listener{
             staff.remove(player.getUniqueId());
         }
         if (player.hasPermission("util.command.basic")) {
-            this.core.getModModeListener().setStaffMode(player, true);
+            this.setStaffMode(player, false);
             for (Player staff : Bukkit.getServer().getOnlinePlayers()) {
                 if ((staff.hasPermission("util.command.basic") && (this.core.getConfig().getBoolean("JoinLeaveMessages")))) {
                     staff.sendMessage(Color.translate(Core.getInstance().getConfig().getString("StaffPrefix") + player.getName() + " has left the server."));

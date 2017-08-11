@@ -75,8 +75,8 @@ public class RequestCommand implements CommandExecutor{
                 for (Player staff : Bukkit.getServer().getOnlinePlayers()) {
                     if (staff.hasPermission("util.recieve"))
                     {
-                        staff.sendMessage(Color.translate("&9[&9Request] &b" + player.getName() + " &7requested assistance"));
-                        staff.sendMessage(Color.translate("     &9Reason:&7 " + StringUtils.join(arguments, ' ') + "&e."));
+                        staff.sendMessage(Color.translate("&4[Request] &e" + player.getName() + " &7requested assistance"));
+                        staff.sendMessage(Color.translate("     &4Reason:&7 " + StringUtils.join(arguments, ' ') + "&e."));
                     }
                 }
             }

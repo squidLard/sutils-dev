@@ -35,7 +35,7 @@ public class GameModeCommand implements CommandExecutor{
                 for (Player staff : Bukkit.getOnlinePlayers()) {
                     if (isAdmin(staff)) {
                         if (p == staff) {
-                            p.sendMessage(Color.translate(Core.getInstance().getConfig().getString("GameModeCreativeMsg")));
+                            p.sendMessage(Color.translate(Core.getInstance().getConfig().getString("GameModeCreativeMsg").replace("%player%", p.getName())));
                         }
                         else
                         {
@@ -54,7 +54,7 @@ public class GameModeCommand implements CommandExecutor{
                 for (Player staff : Bukkit.getOnlinePlayers()) {
                     if (isAdmin(staff)) {
                         if (p == staff) {
-                            p.sendMessage(Color.translate(Core.getInstance().getConfig().getString("GameModeSurvivalMsg")));
+                            p.sendMessage(Color.translate(Core.getInstance().getConfig().getString("GameModeSurvivalMsg").replace("%player%", p.getName())));
                         }
                         else
                         {
@@ -80,7 +80,7 @@ public class GameModeCommand implements CommandExecutor{
                 for (Player staff : Bukkit.getOnlinePlayers()) {
                     if (isAdmin(staff)) {
                         if (p == staff) {
-                            p.sendMessage(Color.translate("&bSet gamemode of " + target.getName() + " to &fCREATIVE"));
+                            p.sendMessage(Color.translate("&eSet gamemode of " + target.getName() + " to &fCREATIVE"));
                         }
                         else
                         {
@@ -98,7 +98,7 @@ public class GameModeCommand implements CommandExecutor{
                 for (Player staff : Bukkit.getOnlinePlayers()) {
                     if (isAdmin(staff)) {
                         if (p == staff) {
-                            p.sendMessage(Color.translate("&bSet gamemode of " + target.getName() + " to &fSURVIVAL"));
+                            p.sendMessage(Color.translate("&eSet gamemode of " + target.getName() + " to &fSURVIVAL"));
                         }
                         else
                         {

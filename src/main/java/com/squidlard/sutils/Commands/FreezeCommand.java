@@ -46,11 +46,11 @@ public class FreezeCommand implements CommandExecutor {
             if (this.core.getFreezeListener().isFrozen(target))
                 {
                     this.core.getFreezeListener().setFreeze(sender, target, false);
-                    player.sendMessage(Color.translate(core.getConfig().getString("UnfreezePlayerMsg").replace("%target%", target.getName())));
+                    player.sendMessage(Color.translate(core.getConfig().getString("UnfreezePlayerMsg").replace("%player%", target.getName())));
                     return true;
                 }
                 this.core.getFreezeListener().setFreeze(sender, target, true);
-                player.sendMessage(Color.translate(core.getConfig().getString("FreezePlayerMsg").replace("%target%", target.getName())));
+                player.sendMessage(Color.translate(core.getConfig().getString("FreezePlayerMsg").replace("%player%", target.getName())));
                 return true;
             }
             return false;

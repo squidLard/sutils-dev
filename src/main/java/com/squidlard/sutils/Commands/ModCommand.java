@@ -54,11 +54,11 @@ public class ModCommand implements CommandExecutor{
             if (this.core.getModModeListener().isStaffModeActive(target))
             {
                 this.core.getModModeListener().setStaffMode(target, false);
-                player.sendMessage(Color.translate(Core.getInstance().getConfig().getString("ModDisableOtherMsg").replace("%target%", target.getName())));
+                player.sendMessage(Color.translate(Core.getInstance().getConfig().getString("ModDisableMsg").replace("%player%", target.getName())));
                 return true;
             }
             this.core.getModModeListener().setStaffMode(target, true);
-            player.sendMessage(Color.translate(Core.getInstance().getConfig().getString("ModEnableOtherMsg").replace("%target%", target.getName())));
+            player.sendMessage(Color.translate(Core.getInstance().getConfig().getString("ModEnableMsg").replace("%player%", target.getName())));
             return true;
         }
         return false;
