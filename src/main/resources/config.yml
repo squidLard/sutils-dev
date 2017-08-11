@@ -1,0 +1,147 @@
+##############################################
+#       SUtils (v2.0) By squidLard.          #
+#    All messages support color codes.       #
+#          Placeholders: %target%.           #
+##############################################
+
+#Toggle Options For SUitls.
+JoinLeaveMessages: false
+
+#Values used for the Map Kit Command.
+Prot: 3
+Unbreaking: 3
+Sharpness: 3
+Power: 4
+FeatherFalling: 4
+
+#Team Speak ip shown when a player is frozen.
+TeamSpeakIP: "&ats.squid.test"
+
+#Mod Mode Enabled / Disabled Messages.
+ModEnableMsg: "&aMod Mode: &7Enabled"
+ModDisableMsg: "&aMod Mode: &7Disabled"
+ModEnableOtherMsg: "&aMod Mode for %target%: &7Enabled"
+ModDisableOtherMsg: "&aMod Mode for %target%: &7Disabled"
+
+#Vanish Disable / Enable Messages.
+VanishEnableMsg: "&aVanish: &7On"
+VanishDisableMsg: "&aVanish: &7Off"
+VanishEnableOtherMsg: "&aVanish for %target%: &7On"
+VanishDisableOtherMsg: "&aVanish for %target%L &7Off"
+
+#Freeze and unfreeze Messages.
+FreezePlayerMsg: "&aYou have frozen &7%target%"
+UnfreezePlayerMsg: "&aYou have unfrozen &7%target%"
+
+#Fly Enable / Disable Messages.
+FlyEnableMsg: "&aSet fly mode Enabled for &7%target%&a."
+FlyDisableMsg: "&aset fly mode Disabled for &7%target%&a."
+
+#GameMode Survival and Creative Messages.
+GameModeSurvivalMsg: "&aGameMode set to &7Survival"
+GameModeCreativeMsg: "&aGameMode set to &7Creative"
+
+#Mod Item Messages.
+RandomTpMsg: "&aYou were randomly teleported to &7%target%."
+InspectPlayerMsg: "&aNow Inspecting &7%target%'s &aInventory."
+
+#Staff prefix for Logging in Logging out and staffchat.
+StaffPrefix: "&8(&7Staff&8)&b"
+
+#No Permission Message.
+NoPerm: "&cNo Permission."
+
+##############################################
+#                                            #
+#           Staff mode Items                 #
+#                                            #
+##############################################
+
+#Information for the Staff GUI item.
+StaffObject:
+  Name: "&aOnline Staff"
+  InventorySlot: 6
+  Lore:
+    - '&7Right click to see online staff.'
+
+#Information for the Random TP item.
+RandomTPObject:
+  Name: "&aRandomTP"
+  InventorySlot: 1
+  Lore:
+    - '&7Right click to teleport to a random player.'
+
+#Information for Block Teleport item.
+BlockTeleportObject:
+  Name: "&aTeleport"
+  InventorySlot: 2
+  Lore:
+    - '&7Right click block: Move through'
+    - '&7Left click: Move to block in line of sight'
+
+#Information for Inspect item.
+InspectObject:
+  Name: "&aInspect"
+  InventorySlot: 3
+  Lore:
+    - '&7Right click a player to inspect inventory.'
+    - '&7You can also by doing /inspect <player>.'
+
+#Information for Carpet item:
+CarpetObject:
+  Name: "&aCarpet"
+  InventorySlot: 4
+  Lore:
+    - '&7Can see better when holding this.'
+
+#Information for vanish Enable item.
+VanishEnableObject:
+  Name: "&7Vanish&8 [&aOn&8]"
+  InventorySlot: 5
+  Lore:
+    - '&7Right click to turn off vanish.'
+
+#Information for vanish Disable item.
+VanishDisableObject:
+  Name: "&7Vanish&8 [&cOff&8]"
+  InventorySlot: 5
+  Lore:
+    - '&7Right click to turn on vanish.'
+
+#List Message.
+#Placeholders: %players_online% | %max_players%.
+List:
+  - '&7&m--------------------------------------------'
+  - '&eThere are currently &a%players_online% &eout of &a%max_players% &eonline.'
+  - '&7&m--------------------------------------------'
+
+#Coords and help messages.
+messages:
+    coords:
+    - '&7&m-----------------------------------------------------'
+    - ' &a&lImportant Locations &7(x, z)'
+    - '   &aEnd Portal: &71500, 1500 [All quadrants]'
+    - '   &aVillage: &7500, -500'
+    - '   &aTemple: &7500, 500'
+    - '   &aGiftMaker: &7-500, 500'
+    - '   &aConquest: &7-500, -500'
+    - '&7&m-----------------------------------------------------'
+    help:
+    - '&7&m----------------------------------------------'
+    - ''
+    - '&aServerIP: play.yourserver.com'
+    - '&7&m----------------------------------------------'
+    - ' '
+    - '&7&lLinks'
+    - '&7* &a&lWebsite: &7www.yourwebsitehere.com'
+    - '&7* &a&lTeamspeak: &7ts.yourtshere.com'
+    - '&7* &a&lStore: &7store.yourstore.com'
+    - ' '
+    - '&7&lUseful Commands'
+    - '&7* &a/report <player> <reason>'
+    - '&7* &a/request <message...>'
+    - '&7* &a/helpop <message...>'
+    - '&7* &a/f create'
+    - '&7* &a/coords'
+    - '&7If you need any help join ts.yourts.com for assistance.'
+    - '&7&m----------------------------------------------'

@@ -1,0 +1,56 @@
+name: SUtils
+main: com.squidlard.sutils.Core
+author: squidLard
+description: SUtils
+version: 2.0
+
+commands:
+  mutechat:
+  blacklist:
+  rename:
+  request:
+  report:
+  coords:
+  sutils:
+  help:
+  copyinv:
+  inspect:
+  list:
+  fly:
+  ores:
+  heal:
+  feed:
+  tphere:
+  gmc:
+    aliases:
+      - "gm1"
+  gms:
+    aliases:
+      - "gm0"
+  tp:
+    aliases:
+      - "teleport"
+  crowgive:
+    aliases:
+      - "crowbar"
+  mod:
+    aliases:
+      - "h"
+      - "modmode"
+      - "staffmode"
+      - "staff"
+  vanish:
+    aliases:
+      - "v"
+  cc:
+    aliases:
+      - "clearchat"
+  mapkit:
+    aliases:
+      - "kit"
+  freeze:
+    aliases:
+      - "ss"
+  staffchat:
+    aliases:
+      - "sc"
