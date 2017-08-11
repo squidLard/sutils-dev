@@ -1,52 +1,48 @@
 ##############################################
 #       SUtils (v2.0) By squidLard.          #
 #    All messages support color codes.       #
-#          Placeholders: %target%.           #
+#          Placeholders: %player%.           #
 ##############################################
 
 #Toggle Options For SUitls.
 JoinLeaveMessages: false
 
-#Values used for the Map Kit Command.
+#MapKit Enchants
 Prot: 3
 Unbreaking: 3
 Sharpness: 3
 Power: 4
 FeatherFalling: 4
 
-#Team Speak ip shown when a player is frozen.
+#TeamSpeakIP.
 TeamSpeakIP: "&ats.squid.test"
 
 #Mod Mode Enabled / Disabled Messages.
-ModEnableMsg: "&aMod Mode: &7Enabled"
-ModDisableMsg: "&aMod Mode: &7Disabled"
-ModEnableOtherMsg: "&aMod Mode for %target%: &7Enabled"
-ModDisableOtherMsg: "&aMod Mode for %target%: &7Disabled"
+ModEnableMsg: "&eMod Mode for %player% &aEnabled."
+ModDisableMsg: "&eMod Mode for %player% &4Disabled."
 
 #Vanish Disable / Enable Messages.
-VanishEnableMsg: "&aVanish: &7On"
-VanishDisableMsg: "&aVanish: &7Off"
-VanishEnableOtherMsg: "&aVanish for %target%: &7On"
-VanishDisableOtherMsg: "&aVanish for %target%L &7Off"
+VanishEnableMsg: "&eVanish mode for %player% set to true."
+VanishDisableMsg: "&eVanish mode for %player% set to false."
 
 #Freeze and unfreeze Messages.
-FreezePlayerMsg: "&aYou have frozen &7%target%"
-UnfreezePlayerMsg: "&aYou have unfrozen &7%target%"
+FreezePlayerMsg: "&eYou have frozen &7%player%"
+UnfreezePlayerMsg: "&eYou have unfrozen &7%player%"
 
 #Fly Enable / Disable Messages.
-FlyEnableMsg: "&aSet fly mode Enabled for &7%target%&a."
-FlyDisableMsg: "&aset fly mode Disabled for &7%target%&a."
+FlyEnableMsg: "&eFly mode for %player% set to true."
+FlyDisableMsg: "&eFly mode for %player% set to false."
 
 #GameMode Survival and Creative Messages.
-GameModeSurvivalMsg: "&aGameMode set to &7Survival"
-GameModeCreativeMsg: "&aGameMode set to &7Creative"
+GameModeSurvivalMsg: "&eSet gamemode of %player% to &fSURVIVAL."
+GameModeCreativeMsg: "&eSet gamemode of %player% to &fCREATIVE."
 
 #Mod Item Messages.
-RandomTpMsg: "&aYou were randomly teleported to &7%target%."
-InspectPlayerMsg: "&aNow Inspecting &7%target%'s &aInventory."
+RandomTpMsg: "&eYou were randomly teleported to &7%target%."
+InspectPlayerMsg: "&eNow Inspecting &7%target%'s &eInventory."
 
-#Staff prefix for Logging in Logging out and staffchat.
-StaffPrefix: "&8(&7Staff&8)&b"
+#Staff Login / Logout prefix.
+StaffPrefix: "&9[Staff&9] &b"
 
 #No Permission Message.
 NoPerm: "&cNo Permission."
@@ -59,60 +55,59 @@ NoPerm: "&cNo Permission."
 
 #Information for the Staff GUI item.
 StaffObject:
-  Name: "&aOnline Staff"
-  InventorySlot: 6
+  Name: "&bOnline Staff"
+  InventorySlot: 8
   Lore:
     - '&7Right click to see online staff.'
 
 #Information for the Random TP item.
 RandomTPObject:
-  Name: "&aRandomTP"
-  InventorySlot: 1
+  Name: "&bRandom Teleport"
+  InventorySlot: 5
   Lore:
     - '&7Right click to teleport to a random player.'
 
 #Information for Block Teleport item.
 BlockTeleportObject:
-  Name: "&aTeleport"
-  InventorySlot: 2
+  Name: "&bTeleport"
+  InventorySlot: 1
   Lore:
     - '&7Right click block: Move through'
     - '&7Left click: Move to block in line of sight'
 
 #Information for Inspect item.
 InspectObject:
-  Name: "&aInspect"
-  InventorySlot: 3
+  Name: "&bInspect"
+  InventorySlot: 2
   Lore:
     - '&7Right click a player to inspect inventory.'
     - '&7You can also by doing /inspect <player>.'
 
 #Information for Carpet item:
 CarpetObject:
-  Name: "&aCarpet"
-  InventorySlot: 4
+  Name: "&bCarpet"
+  InventorySlot: 3
   Lore:
     - '&7Can see better when holding this.'
 
 #Information for vanish Enable item.
 VanishEnableObject:
-  Name: "&7Vanish&8 [&aOn&8]"
-  InventorySlot: 5
+  Name: "&bBecome Visible"
+  InventorySlot: 9
   Lore:
     - '&7Right click to turn off vanish.'
 
 #Information for vanish Disable item.
 VanishDisableObject:
-  Name: "&7Vanish&8 [&cOff&8]"
-  InventorySlot: 5
+  Name: "&bBecome Vanished"
+  InventorySlot: 9
   Lore:
     - '&7Right click to turn on vanish.'
 
 #List Message.
-#Placeholders: %players_online% | %max_players%.
 List:
   - '&7&m--------------------------------------------'
-  - '&eThere are currently &a%players_online% &eout of &a%max_players% &eonline.'
+  - '&eThere are currently &a%players_online% &eout of &a%max_players% &eplayers online.'
   - '&7&m--------------------------------------------'
 
 #Coords and help messages.
