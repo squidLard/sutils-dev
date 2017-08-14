@@ -89,6 +89,7 @@ public class Core extends JavaPlugin implements Listener {
     }
 
     public void registerCommands() {
+        getCommand("playtime").setExecutor(new PlayTimeCommand());
         getCommand("gmc").setExecutor(new GameModeCommand());
         getCommand("gms").setExecutor(new GameModeCommand());
         getCommand("tphere").setExecutor(new TeleportCommand());

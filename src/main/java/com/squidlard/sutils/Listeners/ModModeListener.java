@@ -348,6 +348,7 @@ public class ModModeListener implements Listener{
                 headmeta.setDisplayName(Color.translate("&b" + staff.getName()));
                 fillermeta.setDisplayName(" ");
                 ArrayList<String> headlore = new ArrayList();
+                headlore.add(Color.translate("&7Playtime: &e" + TimeFormat.getTime(staff.getStatistic(Statistic.PLAY_ONE_TICK) / 20)));
                 headlore.add(Color.translate("&7Click to teleport to player."));
                 headmeta.setLore(headlore);
                 filler.setItemMeta(fillermeta);
