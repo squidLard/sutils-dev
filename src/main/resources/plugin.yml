@@ -1,5 +1,5 @@
 name: SUtils
-main: com.squidlard.sutils.Core
+main: com.squidlard.hcf.Core
 author: squidLard
 description: SUtils
 version: 2.0
@@ -21,6 +21,9 @@ commands:
   heal:
   feed:
   tphere:
+  playtime:
+    aliases:
+      - "pt"
   gmc:
     aliases:
       - "gm1"

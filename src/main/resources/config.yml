@@ -18,31 +18,40 @@ FeatherFalling: 4
 TeamSpeakIP: "&ats.squid.test"
 
 #Mod Mode Enabled / Disabled Messages.
-ModEnableMsg: "&eMod Mode for %player% &aEnabled."
-ModDisableMsg: "&eMod Mode for %player% &4Disabled."
+ModEnableMsg: "&eMod Mode for {player} &aEnabled."
+ModDisableMsg: "&eMod Mode for {player} &4Disabled."
 
 #Vanish Disable / Enable Messages.
-VanishEnableMsg: "&eVanish mode for %player% set to true."
-VanishDisableMsg: "&eVanish mode for %player% set to false."
+VanishEnableMsg: "&eVanish mode for {player} set to true."
+VanishDisableMsg: "&eVanish mode for {player} set to false."
 
 #Freeze and unfreeze Messages.
-FreezePlayerMsg: "&eYou have frozen &7%player%"
-UnfreezePlayerMsg: "&eYou have unfrozen &7%player%"
+FreezePlayerMsg: "&eYou have frozen &7{player}"
+UnfreezePlayerMsg: "&eYou have unfrozen &7{player}"
 
 #Fly Enable / Disable Messages.
-FlyEnableMsg: "&eFly mode for %player% set to true."
+FlyEnableMsg: "&eFly mode for {player} set to true."
 FlyDisableMsg: "&eFly mode for %player% set to false."
 
 #GameMode Survival and Creative Messages.
-GameModeSurvivalMsg: "&eSet gamemode of %player% to &fSURVIVAL."
-GameModeCreativeMsg: "&eSet gamemode of %player% to &fCREATIVE."
+GameModeSurvivalMsg: "&eSet gamemode of {player} to &fSURVIVAL."
+GameModeCreativeMsg: "&eSet gamemode of {player} to &fCREATIVE."
 
 #Mod Item Messages.
-RandomTpMsg: "&eYou were randomly teleported to &7%target%."
-InspectPlayerMsg: "&eNow Inspecting &7%target%'s &eInventory."
+RandomTpMsg: "&eYou were randomly teleported to &7{target}."
+InspectPlayerMsg: "&eNow Inspecting &7{target}'s &eInventory."
 
 #Staff Login / Logout prefix.
 StaffPrefix: "&9[Staff&9] &b"
+
+#Staff chat message! Placeholder: %msg% %player%
+StaffChatMsg: "&4[Staff] &e{player}: &7{msg}"
+
+#Frozen player logout message.
+FrozenQuitMessage:
+  - " "
+  - "&4&l%player% has logged out while frozen."
+  - " "
 
 #No Permission Message.
 NoPerm: "&cNo Permission."
@@ -55,8 +64,9 @@ NoPerm: "&cNo Permission."
 
 #Information for the Staff GUI item.
 StaffObject:
-  Name: "&bOnline Staff"
+  Name: "&bStaff GUI"
   InventorySlot: 8
+  Enabled: true
   Lore:
     - '&7Right click to see online staff.'
 
@@ -64,6 +74,7 @@ StaffObject:
 RandomTPObject:
   Name: "&bRandom Teleport"
   InventorySlot: 5
+  Enabled: true
   Lore:
     - '&7Right click to teleport to a random player.'
 
@@ -71,6 +82,7 @@ RandomTPObject:
 BlockTeleportObject:
   Name: "&bTeleport"
   InventorySlot: 1
+  Enabled: true
   Lore:
     - '&7Right click block: Move through'
     - '&7Left click: Move to block in line of sight'
@@ -79,6 +91,7 @@ BlockTeleportObject:
 InspectObject:
   Name: "&bInspect"
   InventorySlot: 2
+  Enabled: true
   Lore:
     - '&7Right click a player to inspect inventory.'
     - '&7You can also by doing /inspect <player>.'
@@ -86,7 +99,8 @@ InspectObject:
 #Information for Carpet item:
 CarpetObject:
   Name: "&bCarpet"
-  InventorySlot: 3
+  InventorySlot: 7
+  Enabled: true
   Lore:
     - '&7Can see better when holding this.'
 
@@ -94,6 +108,7 @@ CarpetObject:
 VanishEnableObject:
   Name: "&bBecome Visible"
   InventorySlot: 9
+  Enabled: true
   Lore:
     - '&7Right click to turn off vanish.'
 
@@ -101,8 +116,16 @@ VanishEnableObject:
 VanishDisableObject:
   Name: "&bBecome Vanished"
   InventorySlot: 9
+  Enabled: true
   Lore:
     - '&7Right click to turn on vanish.'
+
+#Information for the miner item.
+MinerObject:
+  Name: "&bMiner GUI"
+  InventorySlot: 3
+  Lore:
+    - '&7Right click to see online miners.'
 
 ##############################################
 #                                            #
@@ -113,7 +136,7 @@ VanishDisableObject:
 #List Message.
 List:
   - '&7&m--------------------------------------------'
-  - '&eThere are currently &a%players_online% &eout of &a%max_players% &eplayers online.'
+  - '&eThere are currently &a{players_online} &eout of &a{max_players} &eplayers online.'
   - '&7&m--------------------------------------------'
 
 #Coords and help messages.
